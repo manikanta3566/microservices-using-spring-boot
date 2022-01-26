@@ -1,0 +1,18 @@
+user-services
+http://localhost:9001/user/{id}
+
+contact-services
+http://localhost:9002/user/contact/{id}
+
+to communicate between user-services and contact-services using feign client
+url
+http://localhost:9001/user-feign/{id}
+
+
+Eureka naming server
+http://localhost:8761/
+
+apigateway url
+*user-services=http://localhost:8765/user-feign/{id}
+*contact-services=http://localhost:8765/user/contact/{id}
+
